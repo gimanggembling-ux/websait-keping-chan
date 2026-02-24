@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 340 20% 15%;
+
+    --card: 340 30% 97%;
+    --card-foreground: 340 20% 15%;
+
+    --popover: 340 30% 97%;
+    --popover-foreground: 340 20% 15%;
+
+    --primary: 330 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 20% 92%;
+    --secondary-foreground: 340 20% 15%;
+
+    --muted: 330 15% 93%;
+    --muted-foreground: 330 10% 45%;
+
+    --accent: 330 60% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 330 20% 88%;
+    --input: 330 20% 88%;
+    --ring: 330 80% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 340 30% 97%;
+    --sidebar-foreground: 340 20% 15%;
+    --sidebar-primary: 330 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 20% 92%;
+    --sidebar-accent-foreground: 340 20% 15%;
+    --sidebar-border: 330 20% 88%;
+    --sidebar-ring: 330 80% 55%;
+
+    --glow-primary: 330 80% 55%;
+    --shadow-glow: 0 0 30px -5px hsl(330 80% 55% / 0.3);
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.08);
+  }
+
+  .dark {
+    --background: 330 15% 6%;
+    --foreground: 330 20% 92%;
+
+    --card: 330 14% 10%;
+    --card-foreground: 330 20% 92%;
+
+    --popover: 330 14% 10%;
+    --popover-foreground: 330 20% 92%;
+
+    --primary: 330 80% 60%;
+    --primary-foreground: 330 15% 6%;
+
+    --secondary: 330 14% 16%;
+    --secondary-foreground: 330 20% 92%;
+
+    --muted: 330 12% 14%;
+    --muted-foreground: 330 12% 55%;
+
+    --accent: 330 70% 50%;
+    --accent-foreground: 330 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 330 12% 18%;
+    --input: 330 12% 18%;
+    --ring: 330 80% 60%;
+
+    --sidebar-background: 330 14% 8%;
+    --sidebar-foreground: 330 20% 92%;
+    --sidebar-primary: 330 80% 60%;
+    --sidebar-primary-foreground: 330 15% 6%;
+    --sidebar-accent: 330 14% 16%;
+    --sidebar-accent-foreground: 330 20% 92%;
+    --sidebar-border: 330 12% 18%;
+    --sidebar-ring: 330 80% 60%;
+
+    --glow-primary: 330 80% 60%;
+    --shadow-glow: 0 0 30px -5px hsl(330 80% 60% / 0.3);
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px hsl(330 80% 60% / 0.5), 0 0 40px hsl(330 80% 60% / 0.2);
+  }
+
+  .border-glow {
+    box-shadow: 0 0 15px -3px hsl(330 80% 60% / 0.3), inset 0 0 15px -3px hsl(330 80% 60% / 0.1);
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px -5px hsl(330 80% 60% / 0.25);
+    border-color: hsl(330 80% 60% / 0.4);
+  }
+}
